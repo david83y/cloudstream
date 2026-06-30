@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="?attr/primaryGrayBackground"
+    android:background="@drawable/liquid_glass_panel"
     android:layout_height="match_parent">
 
     <ImageView
@@ -18,7 +18,7 @@
         android:layout_height="150dp"
         android:layout_gravity="top"
         android:alpha="1"
-        android:background="@drawable/background_shadow"
+        android:background="@drawable/liquid_glass_hero_overlay"
         android:rotation="180"
         android:visibility="visible" />
 
@@ -27,13 +27,15 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_gravity="bottom"
-        android:background="@drawable/background_shadow" />
+        android:background="@drawable/liquid_glass_hero_overlay" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="20dp"
         android:orientation="vertical">
 
         <ImageView
@@ -49,11 +51,11 @@
             android:id="@+id/home_scroll_preview_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
+            android:layout_gravity="start"
+            android:gravity="start"
             android:paddingHorizontal="30dp"
             android:paddingBottom="10dp"
-            android:textColor="?attr/white"
+            android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="bold"
             tools:text="The Perfect Run" />
@@ -63,7 +65,7 @@
             android:id="@+id/home_season_tags"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="start"
             android:textColor="@color/white"
             android:textSize="14sp"
             tools:text="5 seasons 50 episodes" />-->
@@ -71,11 +73,11 @@
             android:id="@+id/home_scroll_preview_tags"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
+            android:layout_gravity="start"
+            android:gravity="start"
             android:paddingStart="30dp"
             android:paddingEnd="30dp"
-            android:textColor="?attr/white"
+            android:textColor="@color/white"
             android:textSize="14sp"
             tools:text="Hello • World • Tags" />
     </LinearLayout>
