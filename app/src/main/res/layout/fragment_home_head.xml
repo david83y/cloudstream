@@ -5,7 +5,7 @@
     android:id="@+id/home_header"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?attr/primaryBlackBackground"
+    android:background="@color/transparent"
     android:orientation="vertical">
 
     <View
@@ -16,7 +16,7 @@
     <FrameLayout
         android:id="@+id/home_preview_viewpager_text"
         android:layout_width="match_parent"
-        android:layout_height="500dp">
+        android:layout_height="@dimen/liquid_glass_hero_height">
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/home_preview_viewpager"
@@ -29,25 +29,44 @@
         <LinearLayout
             android:id="@+id/home_padding"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="56dp"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:paddingHorizontal="0dp">
+            android:paddingHorizontal="@dimen/liquid_glass_home_margin">
 
+
+            <TextView
+                android:id="@+id/home_logo_wordmark"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/liquid_glass_touch_target"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/liquid_glass_display"
+                android:text="CloudStream"
+                android:textColor="@color/liquid_glass_text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/liquid_glass_accent_circle" />
 
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/home_search"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="8dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/liquid_glass_pill"
                 android:layout_weight="1"
-                android:editTextColor="@color/white"
+                android:editTextColor="@color/liquid_glass_text_primary"
                 android:gravity="center_vertical"
                 android:iconifiedByDefault="true"
                 android:nextFocusRight="@id/home_head_profile_padding"
                 android:padding="0dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
+                android:textColor="@color/liquid_glass_text_primary"
+                android:textColorHint="@color/liquid_glass_text_tertiary"
                 app:closeIcon="@drawable/ic_baseline_close_24"
                 app:iconifiedByDefault="true"
                 app:queryBackground="@color/transparent"
@@ -57,10 +76,11 @@
 
             <LinearLayout
                 android:id="@+id/home_head_profile_padding"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/liquid_glass_touch_target"
+                android:layout_height="@dimen/liquid_glass_touch_target"
                 android:clickable="true"
                 android:focusable="true"
+                android:background="@drawable/liquid_glass_pill"
                 android:foreground="@drawable/rounded_select_ripple"
                 android:gravity="center"
                 android:nextFocusLeft="@id/home_search"
@@ -100,7 +120,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/search"
-                            android:textColor="@color/white"
+                            android:textColor="@color/liquid_glass_text_primary"
                             app:drawableLeftCompat="@drawable/search_icon"
                             app:tint="@color/white" />
         -->
@@ -108,7 +128,7 @@
         <LinearLayout
             android:id="@+id/home_preview_title_holder"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="88dp"
             android:layout_gravity="bottom"
             android:gravity="center"
             android:orientation="horizontal">
@@ -198,6 +218,7 @@
 
     <LinearLayout
         android:id="@+id/home_watch_holder"
+        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"

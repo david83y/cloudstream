@@ -1,33 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="18dp"
+    android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
         android:id="@+id/home_child_more_info"
-        style="@style/WatchHeaderText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="0dp"
-        android:padding="12dp"
-        tools:text="@string/continue_watching"
-        app:drawableRightCompat="@drawable/ic_baseline_arrow_forward_24"
-        app:drawableTint="?attr/white"
-        android:background="?android:attr/selectableItemBackground"
-        android:contentDescription="@string/home_more_info"/>
+        android:layout_height="@dimen/liquid_glass_touch_target"
+        android:layout_marginHorizontal="@dimen/liquid_glass_home_margin"
+        android:background="@drawable/liquid_glass_pill"
+        android:clickable="true"
+        android:contentDescription="@string/home_more_info"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="14dp">
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/liquid_glass_accent_circle" />
+
+        <TextView
+            android:id="@+id/home_child_more_info_text"
+            style="@style/WatchHeaderText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/liquid_glass_display"
+            android:textColor="@color/liquid_glass_text_primary"
+            tools:text="Trending" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/liquid_glass_display"
+            android:text="See All"
+            android:textColor="@color/liquid_glass_accent"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:drawableRightCompat="@drawable/ic_baseline_arrow_forward_24"
+            app:drawableTint="@color/liquid_glass_accent" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-            android:nextFocusUp="@id/home_child_more_info"
-            android:paddingHorizontal="5dp"
-            android:clipToPadding="false"
-            android:descendantFocusability="afterDescendants"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:id="@+id/home_child_recyclerview"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:listitem="@layout/home_result_grid" />
+        android:id="@+id/home_child_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:descendantFocusability="afterDescendants"
+        android:nextFocusUp="@id/home_child_more_info"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/liquid_glass_home_margin"
+        android:paddingEnd="@dimen/liquid_glass_home_margin"
+        android:paddingTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/home_result_grid" />
 </LinearLayout>

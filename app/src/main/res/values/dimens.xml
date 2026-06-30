@@ -32,4 +32,15 @@
     <dimen name="continue_watching_progress_size">25dp</dimen>
     <dimen name="circular_progress_thickness">2dp</dimen>
     <dimen name="download_header_progress_size">35dp</dimen>
+
+    <!-- Liquid Glass home theme dimensions -->
+    <dimen name="liquid_glass_card_radius">10dp</dimen>
+    <dimen name="liquid_glass_section_radius">16dp</dimen>
+    <dimen name="liquid_glass_sheet_radius">24dp</dimen>
+    <dimen name="liquid_glass_container_radius">32dp</dimen>
+    <dimen name="liquid_glass_border_width">1.5dp</dimen>
+    <dimen name="liquid_glass_home_margin">16dp</dimen>
+    <dimen name="liquid_glass_hero_height">236dp</dimen>
+    <dimen name="liquid_glass_touch_target">48dp</dimen>
+
 </resources>
